@@ -1,11 +1,16 @@
-<canvas width="600" height="400"></canvas>
+<canvas width="1600" height="800"></canvas>
 
 <script>
     var tela = document.querySelector('canvas');
     var pincel = tela.getContext('2d');
 
     pincel.fillStyle = 'grey';
-    pincel.fillRect(0, 0, 600, 400);
+    pincel.fillRect(0, 0, 1600, 800);
+
+    // TEXTO DA TELA
+    pincel.font = "40px Georgia";
+    pincel.fillStyle='black';
+    pincel.fillText("DESENHE NA TELA", 600, 50);
 
     var desenha = false;
 
