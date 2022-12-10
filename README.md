@@ -14,7 +14,7 @@
 <br/>
 <p align="left">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JAVA-SCRIPT" width="200" height="200" />
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="HTML" width="200" height="200" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" width="200" height="200" />
 </p>
 
 ###  📜 DESCRIÇÃO:
