@@ -31,6 +31,8 @@
 # Copia e Cola
 https://cursos.alura.com.br/user/eduardo-roqueamaral09/course/logica-programacao-javascript-html/certificate
 
+https://cursos.alura.com.br/user/eduardo-roqueamaral09/course/logica-programacao-javascript-html/certificate
+
 ```
 ##  🐠 Aluno
 <table align="center">
