@@ -57,7 +57,7 @@ nav a:hover {
     box-sizing: border-box;
     border-width: 2px;
     border-color: #000000;
-    border-style: dotted;
+    border-style: solid;
     border-top-width: 10px;
     border-radius: 5%;
 }
