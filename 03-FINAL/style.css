@@ -43,6 +43,10 @@ nav a:hover {
     border-style: ridge;
 }
 
+.produtos a {
+    color: #000000;
+}
+
 .produtos li {
     display: inline-block;
     text-align: center;
