@@ -1,5 +1,3 @@
-//<html><canvas width="600" height="400"></canvas></html>
-
 var tela = document.querySelector('canvas');
 var pincel = tela.getContext('2d');
 

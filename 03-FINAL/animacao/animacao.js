@@ -1,60 +1,57 @@
-var tela = document.querySelector('canvas');
-var pincel = tela.getContext('2d');
-pincel.fillStyle = 'lightgray';
-pincel.fillRect(0, 0, 600, 400);
+//<html><canvas width="600" height="400"></canvas></html>
 
-var x = 20;
-var y = 20;
+function desenhaBandeiraBrasil() {
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
 
-// códigos do teclado
+    pincel.fillStyle="green";
+    pincel.fillRect(0, 0, 600, 400);
 
-var esquerda = 37
-var cima = 38
-var direita = 39
-var baixo = 40
-
-var taxa = 10;
-
-function desenhaCirculo(x, y, raio) {
-
-    pincel.fillStyle = 'blue';
+    pincel.fillStyle="yellow";
     pincel.beginPath();
-    pincel.arc(x, y, raio, 0, 2 * Math.PI);
+    pincel.moveTo(300, 50);
+    pincel.lineTo(50, 200);
+    pincel.lineTo(550, 200);
+    pincel.fill();
+
+    pincel.beginPath();
+    pincel.moveTo(50, 200);
+    pincel.lineTo(300, 350);
+    pincel.lineTo(550, 200);
+    pincel.fill();
+
+    pincel.fillStyle="darkblue";
+    pincel.beginPath();
+
+    pincel.arc(300, 200, 100, 0, 2* 3.14);
     pincel.fill();
 }
+function desenhaBandeiraAlemanha() {
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
 
-function limpaTela() {
+    pincel.fillStyle = 'black';
+    pincel.fillRect(0, 0, 600, 133);
 
-    pincel.clearRect(0, 0, 600, 400);
+    pincel.fillStyle = 'red';
+    pincel.fillRect(0, 133, 600, 133);
+
+    pincel.fillStyle = 'yellow';
+    pincel.fillRect(0, 266, 600, 133);
 }
 
+// ANIMAÇÃO A CADA 3 SEGUNDO TROCA A BANDEIRA.
+var mostraBrasil = true;
 
-function atualizaTela() {
+function trocaBandeira() {
 
-    limpaTela();
-    desenhaCirculo(x, y, 10);
-}
-
-setInterval(atualizaTela, 20);
-
-function leDoTeclado(evento) {
-
-    if(evento.keyCode == cima) {
-
-        y = y - taxa;
-
-    } else if (evento.keyCode == baixo) {
-
-        y = y + taxa;
-
-    } else if (evento.keyCode == esquerda) {
-
-        x = x - taxa;
-
-    } else if (evento.keyCode == direita) {
-
-        x = x + taxa;
+    if(mostraBrasil == true) {
+        desenhaBandeiraBrasil();
+        mostraBrasil = false;
+    } else {
+        desenhaBandeiraAlemanha();
+        mostraBrasil = true;
     }
 }
 
-document.onkeydown = leDoTeclado;
+setInterval(trocaBandeira, 3000); // a cada 3 segundos
